@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="lightPurple">#283593</color>
+    <color name="darkPurple">#1A237E</color>
+    <color name="yoghurtYellow">#FFD185</color>
+    <color name="lightBlue">#00A6FF</color>
+    <color name="red">#F95F62</color>
+</resources>
