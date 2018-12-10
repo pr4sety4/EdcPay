@@ -1,4 +1,4 @@
-package com.example.adi.edcpay.Content;
+package com.example.adi.edcpay.content;
 
 
 import android.os.Bundle;

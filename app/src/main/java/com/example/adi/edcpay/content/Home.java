@@ -1,4 +1,4 @@
-package com.example.adi.edcpay.Content;
+package com.example.adi.edcpay.content;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import com.example.adi.edcpay.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Wallet extends Fragment {
+public class Home extends Fragment {
 
 
-    public Wallet() {
+    public Home() {
         // Required empty public constructor
     }
 
@@ -23,7 +23,7 @@ public class Wallet extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_wallet, container, false);
+        return inflater.inflate(R.layout.activity_main, container, false);
     }
 
 }

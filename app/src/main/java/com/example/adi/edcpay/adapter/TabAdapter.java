@@ -1,4 +1,4 @@
-package com.example.adi.edcpay.Adapter;
+package com.example.adi.edcpay.adapter;
 
 import android.content.Context;
 import android.graphics.PorterDuff;

@@ -1,17 +1,21 @@
 package com.example.adi.edcpay;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.ImageView;
 
-import com.example.adi.edcpay.Adapter.TabAdapter;
-import com.example.adi.edcpay.Content.Finance;
-import com.example.adi.edcpay.Content.History;
-import com.example.adi.edcpay.Content.Home;
-import com.example.adi.edcpay.Content.Merchant;
-import com.example.adi.edcpay.Content.Wallet;
+import com.example.adi.edcpay.adapter.TabAdapter;
+import com.example.adi.edcpay.content.Finance;
+import com.example.adi.edcpay.content.History;
+import com.example.adi.edcpay.content.Home;
+import com.example.adi.edcpay.content.Merchant;
+import com.example.adi.edcpay.content.Notification;
+import com.example.adi.edcpay.content.Wallet;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     TabAdapter tabAdapter;
     TabLayout tabLayout;
     ViewPager viewPager;
+    ImageView imgNotif;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager = findViewById(R.id.viewPager);
         tabLayout = findViewById(R.id.tabLayout);
+        imgNotif = findViewById(R.id.notificationIcon);
 
         int[] tabIcons = {
                 R.drawable.home,
@@ -69,6 +75,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        imgNotif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Notification.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+            }
+        });
+
     }
 
     private void highLightCurrentTab(int position) {
@@ -86,6 +102,4 @@ public class MainActivity extends AppCompatActivity {
         tab.setCustomView(tabAdapter.getSelectedTabView(position));
 
     }
-
-
 }
