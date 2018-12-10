@@ -37,136 +37,26 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarMenu"
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/lightPurple"
-        android:minHeight="?attr/actionBarSize"
-        app:contentInsetLeft="0dp"
-        app:contentInsetStart="0dp"
-        app:titleTextColor="@android:color/white">
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        app:tabBackground="@color/lightPurple"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#FFFFFFFF"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabTextColor="#FFFFFFFF">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:weightSum="5">
+    </android.support.design.widget.TabLayout>
 
-            <LinearLayout
-                android:id="@+id/menuHome"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/home" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Home"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@android:color/background_light" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/menuMerchant"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/shopping_basket" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Merchant"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@android:color/background_light" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/menuFinance"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
-
-                >
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/finance" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Finance"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@android:color/background_light" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/menuWallet"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/wallet" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Wallet"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@android:color/background_light" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/menuHistory"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/history" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="History"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@android:color/background_light" />
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-    </android.support.v7.widget.Toolbar>
-
+    </android.support.v4.view.ViewPager>
     <!-- include your activity_main.xml here  -->
 
-    <include layout="@layout/activity_history" />
 </LinearLayout>
