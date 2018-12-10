@@ -18,12 +18,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".content.Notification" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PromoActivity" />
+        <activity android:name=".UserActivity" />
+        <activity android:name=".PinActivity" />
+        <activity android:name=".RegisterActivity"></activity>
     </application>
 
 </manifest>
