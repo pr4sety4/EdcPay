@@ -31,7 +31,8 @@
         <activity android:name=".PromoActivity" />
         <activity android:name=".UserActivity" />
         <activity android:name=".PinActivity" />
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>
