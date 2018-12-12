@@ -15,6 +15,7 @@ import com.example.adi.edcpay.content.History;
 import com.example.adi.edcpay.content.Home;
 import com.example.adi.edcpay.content.Merchant;
 import com.example.adi.edcpay.content.Notification;
+import com.example.adi.edcpay.content.Setting;
 import com.example.adi.edcpay.content.Wallet;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     TabAdapter tabAdapter;
     TabLayout tabLayout;
     ViewPager viewPager;
-    ImageView imgNotif;
+    ImageView imgNotif, imgSetting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
         tabLayout = findViewById(R.id.tabLayout);
         imgNotif = findViewById(R.id.notificationIcon);
+        imgSetting = findViewById(R.id.settingsIcon);
 
         int[] tabIcons = {
                 R.drawable.home,
@@ -80,6 +82,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Notification.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+            }
+        });
+
+        imgSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Setting.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
             }

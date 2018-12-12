@@ -1,6 +1,7 @@
 package com.example.adi.edcpay.content;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 
+import com.example.adi.edcpay.DetailTransactionActivity;
 import com.example.adi.edcpay.R;
 import com.example.adi.edcpay.adapter.NotificationListAdapter;
 
@@ -20,7 +22,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class History extends Fragment {
+public class History extends Fragment implements ExpandableListView.OnChildClickListener {
 
     Toolbar notifMainToolbar;
     ExpandableListView notifElv;
@@ -43,10 +45,15 @@ public class History extends Fragment {
         prepareListData();
 
         listAdapter = new NotificationListAdapter(getActivity(), listNotifHeader, listNotifChild);
-
         // setting list adapter
         notifElv.setAdapter(listAdapter);
 
+        int count = listAdapter.getGroupCount();
+        for (int i = 0; i < count; i++) {
+            notifElv.expandGroup(i);
+        }
+
+        notifElv.setOnChildClickListener(this);
         return view;
     }
 
@@ -89,4 +96,12 @@ public class History extends Fragment {
         listNotifChild.put(listNotifHeader.get(2), comingSoon);
     }
 
+    @Override
+    public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+
+        Intent intent = new Intent(getActivity(), DetailTransactionActivity.class);
+        startActivity(intent);
+
+        return true;
+    }
 }

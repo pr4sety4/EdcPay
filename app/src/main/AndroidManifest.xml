@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.adi.edcpay">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -32,7 +34,12 @@
         <activity android:name=".UserActivity" />
         <activity android:name=".PinActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".content.Setting" />
+        <activity android:name=".FormActivity" />
+        <activity android:name=".content.Scanner" />
+        <activity android:name=".promoListActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".DetailTransactionActivity"></activity>
     </application>
 
 </manifest>

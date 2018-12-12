@@ -20,5 +20,5 @@
         android:text="Home"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/background_light"
-        android:textSize="12sp" />
+        android:textSize="10sp" />
 </LinearLayout>

@@ -9,6 +9,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="200dp"
+        android:id="@+id/imgCard"
         android:src="@drawable/ovocard" />
 
     <TextView
@@ -36,6 +37,7 @@
         <ImageView
             android:layout_width="160dp"
             android:layout_height="110dp"
+            android:id="@+id/imgCardMatahari"
             android:src="@drawable/matahari" />
 
         <TextView

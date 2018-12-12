@@ -8,4 +8,5 @@
     <color name="yoghurtYellow">#FFD185</color>
     <color name="lightBlue">#00A6FF</color>
     <color name="red">#F95F62</color>
+    <color name="transparent">#00000000</color>
 </resources>
