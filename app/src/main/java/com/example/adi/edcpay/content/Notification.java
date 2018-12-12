@@ -10,7 +10,7 @@ import android.widget.ExpandableListView;
 
 import com.example.adi.edcpay.DetailTransactionActivity;
 import com.example.adi.edcpay.R;
-import com.example.adi.edcpay.adapter.NotificationListAdapter;
+import com.example.adi.edcpay.adapter.SimpleNotifListAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,7 +38,7 @@ public class Notification extends AppCompatActivity implements View.OnClickListe
 
         prepareListData();
 
-        listAdapter = new NotificationListAdapter(this, listNotifHeader, listNotifChild);
+        listAdapter = new SimpleNotifListAdapter(this, listNotifHeader, listNotifChild);
 
         // setting list adapter
         notifElv.setAdapter(listAdapter);
