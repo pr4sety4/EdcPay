@@ -4,6 +4,7 @@ package com.example.adi.edcpay.content;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -30,7 +31,8 @@ public class Home extends Fragment implements View.OnClickListener, PromoAdapter
         // Required empty public constructor
     }
 
-    ImageView imgPln, imgPulsa, imgPascabayar, imgBpjs, imgTvKabel, imgAsuransi, imgSeeAll, imgTopUp, imgSend, imgRequest, imgScan, imgPay;
+    CardView imgPln, imgPulsa, imgPascabayar, imgBpjs, imgTvKabel, imgAsuransi, imgPaketData;
+    ImageView imgSeeAll, imgTopUp, imgSend, imgRequest, imgScan, imgPay;
     RecyclerView recyclerViewPromo;
     PromoAdapter promoAdapter;
     LinearLayout userLayout, cashLayout;
@@ -40,12 +42,13 @@ public class Home extends Fragment implements View.OnClickListener, PromoAdapter
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_main, container, false);
 
-        imgPln = view.findViewById(R.id.imgPln);
-        imgPulsa = view.findViewById(R.id.imgPulsa);
-        imgPascabayar = view.findViewById(R.id.imgPascaBayar);
-        imgBpjs = view.findViewById(R.id.imgBpjs);
-        imgTvKabel = view.findViewById(R.id.imgTvKAbel);
-        imgAsuransi = view.findViewById(R.id.imgAsuransi);
+        imgPln = view.findViewById(R.id.plnIcon);
+        imgPulsa = view.findViewById(R.id.pulsaIcon);
+        imgPascabayar = view.findViewById(R.id.pascaBayarIcon);
+        imgBpjs = view.findViewById(R.id.bpjsIcon);
+        imgTvKabel = view.findViewById(R.id.tvKabelIcon);
+        imgAsuransi = view.findViewById(R.id.asuransiIcon);
+        imgPaketData = view.findViewById(R.id.paketDataIcon);
         imgTopUp = view.findViewById(R.id.topupIcon);
         imgSend = view.findViewById(R.id.sendIcon);
         imgRequest = view.findViewById(R.id.requestIcon);
@@ -71,6 +74,7 @@ public class Home extends Fragment implements View.OnClickListener, PromoAdapter
         imgPascabayar.setOnClickListener(this);
         imgBpjs.setOnClickListener(this);
         imgTvKabel.setOnClickListener(this);
+        imgPaketData.setOnClickListener(this);
         imgAsuransi.setOnClickListener(this);
         imgTopUp.setOnClickListener(this);
         imgSend.setOnClickListener(this);
@@ -88,22 +92,25 @@ public class Home extends Fragment implements View.OnClickListener, PromoAdapter
         Intent intentForm = new Intent(getActivity(), FormActivity.class);
         Intent intentScan = new Intent(getActivity(), Scanner.class);
         switch (v.getId()) {
-            case R.id.imgPln:
+            case R.id.plnIcon:
                 startActivity(intentForm);
                 break;
-            case R.id.imgPulsa:
+            case R.id.pulsaIcon:
                 startActivity(intentForm);
                 break;
-            case R.id.imgPascaBayar:
+            case R.id.pascaBayarIcon:
                 startActivity(intentForm);
                 break;
-            case R.id.imgBpjs:
+            case R.id.bpjsIcon:
                 startActivity(intentForm);
                 break;
-            case R.id.imgTvKAbel:
+            case R.id.tvKabelIcon:
                 startActivity(intentForm);
                 break;
-            case R.id.imgAsuransi:
+            case R.id.asuransiIcon:
+                startActivity(intentForm);
+                break;
+            case R.id.paketDataIcon:
                 startActivity(intentForm);
                 break;
             case R.id.topupIcon:

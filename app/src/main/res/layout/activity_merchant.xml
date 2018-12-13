@@ -34,8 +34,10 @@
         android:background="#FFFF">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:focusableInTouchMode="true"
             android:orientation="vertical">
 
             <android.support.v7.widget.RecyclerView
@@ -44,77 +46,192 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/paymentIcon"
                 android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"></android.support.v7.widget.RecyclerView>
+                android:layout_marginLeft="20dp">
+
+            </android.support.v7.widget.RecyclerView>
 
             <LinearLayout
                 android:id="@+id/merchantMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:weightSum="3">
 
-                    <ImageView
-                        android:id="@+id/nearmeIcon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/nearMeIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:src="@drawable/nearme" />
+                        android:elevation="20dp">
 
-                    <ImageView
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/nearme" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Near Me"
+                                android:textSize="8sp"
+                                app:fontFamily="@font/roboto" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
                         android:id="@+id/dealsAndPromoIcon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:src="@drawable/dealsnpromo" />
+                        android:elevation="20dp">
 
-                    <ImageView
-                        android:id="@+id/myVouchersIcon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/dealsnpromo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Deals "
+                                android:textSize="8sp"
+                                app:fontFamily="@font/roboto" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/voucherIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/myvouchers" />
+                        android:layout_margin="10dp"
+                        android:elevation="20dp">
 
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/myvoucher" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Vouchers"
+                                android:textSize="8sp"
+                                app:fontFamily="@font/roboto" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:weightSum="3">
 
-                    <ImageView
-                        android:id="@+id/mallIcon"
-                        android:layout_width="fill_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:src="@drawable/mall" />
-
-                    <ImageView
+                    <android.support.v7.widget.CardView
                         android:id="@+id/merchantsIcon"
-                        android:layout_width="fill_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:src="@drawable/merchants" />
+                        android:elevation="20dp">
 
-                    <ImageView
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/merchants" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Merchants"
+                                android:textSize="8sp"
+                                app:fontFamily="@font/roboto" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:id="@+id/mallIcon"
+                        android:elevation="20dp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/mall" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mall"
+                                android:textSize="8sp"
+                                app:fontFamily="@font/roboto" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -219,12 +336,9 @@
                 </LinearLayout>
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -322,12 +436,9 @@
                 </LinearLayout>
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:orientation="vertical"
 
                 >
@@ -425,6 +536,7 @@
                     </LinearLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
+            </LinearLayout>
 
             </LinearLayout>
         </LinearLayout>

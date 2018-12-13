@@ -4,6 +4,7 @@ package com.example.adi.edcpay.content;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -28,7 +29,9 @@ public class Merchant extends Fragment implements PromoAdapter.ItemClickListener
         // Required empty public constructor
     }
 
-    ImageView imgNearMe, imgDealsnPromo, imgMyVouchers, imgMall, imgMerchants, imgHealth, imgEntertainmet, imgFood, imgShopping, imgTransport, imgEducation, imgGift, imgTravel, imgSport;
+    CardView imgNearMe, imgDealsnPromo, imgMyVouchers, imgMall, imgMerchants;
+
+    ImageView imgHealth, imgEntertainmet, imgFood, imgShopping, imgTransport, imgEducation, imgGift, imgTravel, imgSport;
     RecyclerView recyclerViewPromo;
     PromoAdapter promoAdapter;
 
@@ -37,9 +40,9 @@ public class Merchant extends Fragment implements PromoAdapter.ItemClickListener
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_merchant, container, false);
 
-        imgNearMe = view.findViewById(R.id.nearmeIcon);
+        imgNearMe = view.findViewById(R.id.nearMeIcon);
         imgDealsnPromo = view.findViewById(R.id.dealsAndPromoIcon);
-        imgMyVouchers = view.findViewById(R.id.myVouchersIcon);
+        imgMyVouchers = view.findViewById(R.id.voucherIcon);
         imgMall = view.findViewById(R.id.mallIcon);
         imgMerchants = view.findViewById(R.id.merchantsIcon);
         imgHealth = view.findViewById(R.id.healthIcon);
