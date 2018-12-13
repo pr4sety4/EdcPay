@@ -37,7 +37,7 @@ public class DetailActivity extends AppCompatActivity {
         collapsingToolbarLayout.setExpandedTitleColor(ContextCompat.getColor(this, R.color.transparent));
         collapsingToolbarLayout.setCollapsedTitleTextColor(Color.rgb(255, 255, 255));
 
-        notifElv = findViewById(R.id.notificationElv);
+        notifElv = findViewById(R.id.elvDetail);
 
         prepareListData();
 

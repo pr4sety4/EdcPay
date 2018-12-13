@@ -10,7 +10,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="8dp"
-        android:paddingTop="5dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
         android:text="Pras"
         android:textColor="#000000"
         android:textSize="14sp" />

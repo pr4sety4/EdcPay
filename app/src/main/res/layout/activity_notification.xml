@@ -20,7 +20,6 @@
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:text="Notification"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textColor="@android:color/background_light" />

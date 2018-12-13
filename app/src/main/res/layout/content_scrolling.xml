@@ -8,17 +8,23 @@
     tools:context=".DetailActivity"
     tools:showIn="@layout/activity_scrolling">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="Description" />
-
-    <ExpandableListView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    </ExpandableListView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="Description" />
+
+        <ExpandableListView
+            android:id="@+id/elvDetail"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="16dp" />
+    </LinearLayout>
+
 
 </android.support.v4.widget.NestedScrollView>

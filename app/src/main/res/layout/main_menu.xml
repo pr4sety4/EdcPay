@@ -14,16 +14,11 @@
         android:minHeight="?attr/actionBarSize"
         app:titleTextColor="@android:color/white">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/list" />
-
         <TextView
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
             android:text="EdcPay"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textColor="@android:color/background_light" />
