@@ -17,23 +17,38 @@
         app:titleTextColor="@android:color/white">
 
 
-        <TextView
+        <EditText
             android:id="@+id/toolbar_title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:text="Promo"
+            android:background="@color/transparent"
+            android:hint="Search Promo ..."
+            android:textColorHint="@color/transparentWhite"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textColor="@android:color/background_light" />
 
     </android.support.v7.widget.Toolbar>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/homePromoRecyclerView"
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/paymentIcon"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"></android.support.v7.widget.RecyclerView>
+        android:minHeight="?actionBarSize"
+        app:tabBackground="@color/lightPurple"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#FFFFFFFF"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabTextColor="#FFFFFFFF">
+
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>
