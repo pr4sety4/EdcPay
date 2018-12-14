@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -20,7 +18,7 @@
         app:titleTextColor="@android:color/white">
 
         <TextView
-            android:id="@+id/toolbar_title"
+            android:id="@+id/toolbarTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -30,7 +28,6 @@
     </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/lightPurple"
@@ -38,13 +35,13 @@
         app:titleTextColor="@android:color/white">
 
         <ImageView
-            android:id="@+id/imageIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/subToolbarImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/home" />
 
         <TextView
-            android:id="@+id/toolbar_title2"
+            android:id="@+id/subToolbarTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -53,9 +50,12 @@
             android:textColor="@android:color/background_light" />
     </android.support.v7.widget.Toolbar>
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="20dp"
         android:elevation="25dp">
 
@@ -257,7 +257,6 @@
                 android:textSize="16dp" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
-
+    </ScrollView>
 
 </LinearLayout>
-</ScrollView>

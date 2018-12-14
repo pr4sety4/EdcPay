@@ -9,9 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.adi.edcpay.ChooseBuyActivity;
 import com.example.adi.edcpay.FormActivity;
 import com.example.adi.edcpay.R;
 import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
@@ -38,11 +40,31 @@ public class Finance extends Fragment implements View.OnClickListener {
 
         GraphView graph = view.findViewById(R.id.graph);
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[]{
-                new DataPoint(0, 1),
-                new DataPoint(1, 5),
-                new DataPoint(2, 3)
+                new DataPoint(0, 8),
+                new DataPoint(1, 6),
+                new DataPoint(2, 7),
+                new DataPoint(3, 9),
+                new DataPoint(4, 12),
+                new DataPoint(5, 15),
+                new DataPoint(6, 10),
+                new DataPoint(7, 8),
+                new DataPoint(8, 6),
+                new DataPoint(9, 7),
+                new DataPoint(10, 4),
+                new DataPoint(11, 6),
+                new DataPoint(12, 5),
+                new DataPoint(13, 3),
+                new DataPoint(14, 1),
         });
         graph.addSeries(series);
+//        graph.getGridLabelRenderer().setGridStyle(GridLabelRenderer.GridStyle.NONE);
+        graph.getGridLabelRenderer().setVerticalLabelsVisible(false);
+        graph.getGridLabelRenderer().setHorizontalLabelsVisible(false);
+        graph.getGridLabelRenderer().setGridStyle(GridLabelRenderer.GridStyle.HORIZONTAL);
+        graph.getGridLabelRenderer().setGridColor(getResources().getColor(R.color.white));
+        series.setColor(getResources().getColor(R.color.white));
+        series.setBackgroundColor(getResources().getColor(R.color.transparentWhite));
+        series.setDrawBackground(true);
 
         imgSend.setOnClickListener(this);
         imgBuy.setOnClickListener(this);
@@ -53,7 +75,16 @@ public class Finance extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(getActivity(), FormActivity.class);
-        startActivity(intent);
+        switch (v.getId()) {
+            case R.id.buyIcon:
+                Intent intentBuy = new Intent(getActivity(), ChooseBuyActivity.class);
+                startActivity(intentBuy);
+                break;
+            default:
+                Intent intent = new Intent(getActivity(), FormActivity.class);
+                startActivity(intent);
+                break;
+        }
+
     }
 }

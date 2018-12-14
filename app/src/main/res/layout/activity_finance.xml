@@ -91,7 +91,7 @@
                 android:id="@+id/buyIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/bitcoin" />
+                android:src="@drawable/bitcoin" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -160,26 +160,117 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:background="@color/lightBlue"
+                android:orientation="vertical"
+                android:paddingTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Bitcoin Price"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="7 days | updated 7 minutes ago"
+                            android:textColor="@color/white"
+                            android:textSize="8dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|end">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            app:cardBackgroundColor="@color/transparentWhite">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableRight="@drawable/dropdownarrow"
+                                android:fontFamily="@font/roboto"
+                                android:padding="5dp"
+                                android:text="BTC/IDR  "
+                                android:textColor="@color/white"
+                                android:textSize="16dp" />
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+                </LinearLayout>
 
                 <com.jjoe64.graphview.GraphView
                     android:id="@+id/graph"
                     android:layout_width="match_parent"
                     android:layout_height="200dip"
-                    android:title="Graphic" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="5dp"
-                    android:background="#E0E0E0"
-                    android:radius="10dp" />
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="IDR 50,534,000"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:gravity="right|end">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/downward" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="16,36%"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:paddingBottom="5dp"
                     android:gravity="right"
                     android:paddingRight="20dp"
                     android:paddingTop="5dp">
@@ -189,17 +280,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
                         android:fontFamily="@font/roboto"
-                        android:text="Buy"
-                        android:textColor="@color/darkPurple"
-                        android:textSize="25dp" />
+                        android:text="Buy Bitcoin"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto"
-                        android:text="Sell"
-                        android:textColor="@color/darkPurple"
-                        android:textSize="25dp" />
+                        android:text="Sell Bitcoin"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="14dp" />
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>

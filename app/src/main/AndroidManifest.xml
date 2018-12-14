@@ -39,7 +39,11 @@
         <activity android:name=".content.Scanner" />
         <activity android:name=".promoListActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".DetailTransactionActivity"></activity>
+        <activity android:name=".DetailTransactionActivity" />
+        <activity android:name=".ChooseBuyActivity" />
+        <activity android:name=".BuyActivity" />
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".EditActivity"></activity>
     </application>
 
 </manifest>

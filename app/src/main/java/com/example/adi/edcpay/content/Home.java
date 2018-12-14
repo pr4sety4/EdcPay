@@ -1,6 +1,7 @@
 package com.example.adi.edcpay.content;
 
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,10 +15,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.adi.edcpay.DetailActivity;
+import com.example.adi.edcpay.DetailTransactionActivity;
+import com.example.adi.edcpay.EditProfileActivity;
 import com.example.adi.edcpay.FormActivity;
 import com.example.adi.edcpay.R;
-import com.example.adi.edcpay.UserActivity;
 import com.example.adi.edcpay.adapter.PromoAdapter;
+import com.example.adi.edcpay.util.Constant;
 
 import java.util.ArrayList;
 
@@ -87,30 +90,50 @@ public class Home extends Fragment implements View.OnClickListener, PromoAdapter
         return view;
     }
 
+    public void showPopUp() {
+        Dialog dialog = new Dialog(getActivity());
+        dialog.setContentView(R.layout.pay_pop_up);
+        dialog.show();
+    }
+
     @Override
     public void onClick(View v) {
         Intent intentForm = new Intent(getActivity(), FormActivity.class);
         Intent intentScan = new Intent(getActivity(), Scanner.class);
         switch (v.getId()) {
             case R.id.plnIcon:
+                intentForm.putExtra(Constant.TITLE, "PLN");
+                intentForm.putExtra(Constant.ICON, R.drawable.plntitleicon);
                 startActivity(intentForm);
                 break;
             case R.id.pulsaIcon:
+                intentForm.putExtra(Constant.TITLE, "Pulsa");
+                intentForm.putExtra(Constant.ICON, R.drawable.telkomsel);
                 startActivity(intentForm);
                 break;
             case R.id.pascaBayarIcon:
+                intentForm.putExtra(Constant.TITLE, "Pascabayar");
+                intentForm.putExtra(Constant.ICON, R.drawable.telkomsel);
                 startActivity(intentForm);
                 break;
             case R.id.bpjsIcon:
+                intentForm.putExtra(Constant.TITLE, "BPJS");
+                intentForm.putExtra(Constant.ICON, R.drawable.bpjstitleicon);
                 startActivity(intentForm);
                 break;
             case R.id.tvKabelIcon:
+                intentForm.putExtra(Constant.TITLE, "TV Kabel");
+                intentForm.putExtra(Constant.ICON, R.drawable.toptvicontitle);
                 startActivity(intentForm);
                 break;
             case R.id.asuransiIcon:
+                intentForm.putExtra(Constant.TITLE, "Asuransi");
+                intentForm.putExtra(Constant.ICON, R.drawable.bpjstitleicon);
                 startActivity(intentForm);
                 break;
             case R.id.paketDataIcon:
+                intentForm.putExtra(Constant.TITLE, "Paket Data");
+                intentForm.putExtra(Constant.ICON, R.drawable.telkomsel);
                 startActivity(intentForm);
                 break;
             case R.id.topupIcon:
@@ -126,14 +149,14 @@ public class Home extends Fragment implements View.OnClickListener, PromoAdapter
                 startActivity(intentScan);
                 break;
             case R.id.payIcon:
-                startActivity(intentScan);
+                showPopUp();
                 break;
             case R.id.userLayout:
-                Intent intentUser = new Intent(getActivity(), UserActivity.class);
+                Intent intentUser = new Intent(getActivity(), EditProfileActivity.class);
                 startActivity(intentUser);
                 break;
             case R.id.cashLayout:
-                Intent intentCash = new Intent(getActivity(), UserActivity.class);
+                Intent intentCash = new Intent(getActivity(), DetailTransactionActivity.class);
                 startActivity(intentCash);
                 break;
         }

@@ -22,7 +22,7 @@ public class Wallet extends Fragment implements View.OnClickListener {
         // Required empty public constructor
     }
 
-    ImageView imgCard, imgCardMatahari;
+    ImageView imgCard;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,10 +30,8 @@ public class Wallet extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.activity_wallet, container, false);
 
         imgCard = view.findViewById(R.id.imgCard);
-        imgCardMatahari = view.findViewById(R.id.imgCardMatahari);
 
         imgCard.setOnClickListener(this);
-        imgCardMatahari.setOnClickListener(this);
 
         return view;
     }

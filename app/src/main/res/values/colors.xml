@@ -2,11 +2,14 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#000</color>
+    <color name="colorAccent">#1A237E</color>
     <color name="lightPurple">#283593</color>
     <color name="darkPurple">#1A237E</color>
     <color name="yoghurtYellow">#FFD185</color>
     <color name="lightBlue">#00A6FF</color>
     <color name="red">#F95F62</color>
     <color name="transparent">#00000000</color>
+    <color name="aquaBlue">#29B6F6</color>
+    <color name="white">#ffffff</color>
+    <color name="transparentWhite">#28ffffff</color>
 </resources>

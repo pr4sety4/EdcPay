@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.adi.edcpay.EditProfileActivity;
 import com.example.adi.edcpay.LoginActivity;
 import com.example.adi.edcpay.R;
-import com.example.adi.edcpay.UserActivity;
 
 public class Setting extends AppCompatActivity implements View.OnClickListener {
 
@@ -56,7 +56,7 @@ public class Setting extends AppCompatActivity implements View.OnClickListener {
                 startActivity(intentLogOut);
                 break;
             case R.id.tvEditProfile:
-                Intent intentEditProfile = new Intent(this, UserActivity.class);
+                Intent intentEditProfile = new Intent(this, EditProfileActivity.class);
                 startActivity(intentEditProfile);
                 break;
         }
