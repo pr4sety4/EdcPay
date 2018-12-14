@@ -103,36 +103,43 @@ public class Home extends Fragment implements View.OnClickListener, PromoAdapter
         switch (v.getId()) {
             case R.id.plnIcon:
                 intentForm.putExtra(Constant.TITLE, "PLN");
+                intentForm.putExtra(Constant.SUB_TITLE, "PLN");
                 intentForm.putExtra(Constant.ICON, R.drawable.plntitleicon);
                 startActivity(intentForm);
                 break;
             case R.id.pulsaIcon:
                 intentForm.putExtra(Constant.TITLE, "Pulsa");
+                intentForm.putExtra(Constant.SUB_TITLE, "Telkomsel");
                 intentForm.putExtra(Constant.ICON, R.drawable.telkomsel);
                 startActivity(intentForm);
                 break;
             case R.id.pascaBayarIcon:
                 intentForm.putExtra(Constant.TITLE, "Pascabayar");
+                intentForm.putExtra(Constant.SUB_TITLE, "Telkomsel");
                 intentForm.putExtra(Constant.ICON, R.drawable.telkomsel);
                 startActivity(intentForm);
                 break;
             case R.id.bpjsIcon:
                 intentForm.putExtra(Constant.TITLE, "BPJS");
+                intentForm.putExtra(Constant.SUB_TITLE, "BPJS Kesehatan");
                 intentForm.putExtra(Constant.ICON, R.drawable.bpjstitleicon);
                 startActivity(intentForm);
                 break;
             case R.id.tvKabelIcon:
                 intentForm.putExtra(Constant.TITLE, "TV Kabel");
+                intentForm.putExtra(Constant.SUB_TITLE, "Top Tv");
                 intentForm.putExtra(Constant.ICON, R.drawable.toptvicontitle);
                 startActivity(intentForm);
                 break;
             case R.id.asuransiIcon:
                 intentForm.putExtra(Constant.TITLE, "Asuransi");
+                intentForm.putExtra(Constant.SUB_TITLE, "BPJS Kesehatan");
                 intentForm.putExtra(Constant.ICON, R.drawable.bpjstitleicon);
                 startActivity(intentForm);
                 break;
             case R.id.paketDataIcon:
                 intentForm.putExtra(Constant.TITLE, "Paket Data");
+                intentForm.putExtra(Constant.SUB_TITLE, "Telkomsel");
                 intentForm.putExtra(Constant.ICON, R.drawable.telkomsel);
                 startActivity(intentForm);
                 break;
@@ -140,9 +147,15 @@ public class Home extends Fragment implements View.OnClickListener, PromoAdapter
                 startActivity(intentForm);
                 break;
             case R.id.sendIcon:
+                intentForm.putExtra(Constant.TITLE, "Send");
+                intentForm.putExtra(Constant.SUB_TITLE, "Send");
+                intentForm.putExtra(Constant.ICON, R.drawable.send);
                 startActivity(intentForm);
                 break;
             case R.id.requestIcon:
+                intentForm.putExtra(Constant.TITLE, "Request");
+                intentForm.putExtra(Constant.SUB_TITLE, "Request");
+                intentForm.putExtra(Constant.ICON, R.drawable.send);
                 startActivity(intentForm);
                 break;
             case R.id.scanIcon:

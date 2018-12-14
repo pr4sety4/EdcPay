@@ -34,19 +34,27 @@
         android:minHeight="?attr/actionBarSize"
         app:titleTextColor="@android:color/white">
 
-        <ImageView
-            android:id="@+id/subToolbarImage"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/home" />
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp">
+
+            <ImageView
+                android:id="@+id/subToolbarImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/home" />
+        </android.support.v7.widget.CardView>
+
 
         <TextView
             android:id="@+id/subToolbarTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="20dp"
             android:text="Pay"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textColor="@android:color/background_light" />
     </android.support.v7.widget.Toolbar>
 
@@ -69,7 +77,9 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:id="@+id/etFirstInput"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
 
                 <EditText
                     android:layout_width="match_parent"
@@ -81,7 +91,9 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:id="@+id/etSecondInput"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
 
                 <EditText
                     android:layout_width="match_parent"
@@ -95,43 +107,58 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:id="@+id/radioGroup"
+                android:visibility="gone"
                 android:weightSum="2">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:id="@+id/radioPrabayar"
                     android:text="Prabayar" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:id="@+id/radioPascabayar"
                     android:text="Pascabayar" />
             </RadioGroup>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/nominalLayout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Nominal"
-                android:textSize="10sp" />
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvNominal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Nominal"
+                    android:textSize="10sp" />
 
 
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:textSize="12sp">
+                <Spinner
+                    android:id="@+id/spinnerNominal"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textSize="12sp">
 
-            </Spinner>
+                </Spinner>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:background="#000"
-                android:radius="10dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:background="#000"
+                    android:radius="10dp" />
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -163,98 +190,106 @@
                 android:text="Sisa saldo Cash 999.999"
                 android:textSize="10sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
-                android:text="Detail"
-                android:textColor="#000"
-                android:textSize="12sp" />
-
             <LinearLayout
+                android:id="@+id/detailLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Voucher"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="right|end"
-                    android:text="Rp. 90.000"
-                    android:textSize="10sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Biaya Transaksi"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="right|end"
-                    android:text="Rp. 0"
-                    android:textSize="10sp" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:background="#E0E0E0"
-                android:radius="10dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto"
-                    android:text="Total"
+                    android:text="Detail"
                     android:textColor="#000"
                     android:textSize="12sp" />
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voucher"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|end"
+                        android:text="Rp. 90.000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Biaya Transaksi"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|end"
+                        android:text="Rp. 0"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:background="#E0E0E0"
+                    android:radius="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:text="Total"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="right|end"
+                        android:text="Rp. 90.000"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <Button
+
+                    android:id="@+id/btnNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/buttonregisterborder"
                     android:fontFamily="@font/roboto"
-                    android:gravity="right|end"
-                    android:text="Rp. 90.000"
-                    android:textColor="#000"
-                    android:textSize="12sp" />
+                    android:text="NEXT "
+                    android:textColor="#00C853"
+                    android:textSize="16dp" />
             </LinearLayout>
-
-            <Button
-
-                android:id="@+id/btnLogOut"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_gravity="end|bottom"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/buttonregisterborder"
-                android:fontFamily="@font/roboto"
-                android:text="NEXT "
-                android:textColor="#00C853"
-                android:textSize="16dp" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
     </ScrollView>

@@ -43,7 +43,8 @@
         <activity android:name=".ChooseBuyActivity" />
         <activity android:name=".BuyActivity" />
         <activity android:name=".EditProfileActivity" />
-        <activity android:name=".EditActivity"></activity>
+        <activity android:name=".EditActivity" />
+        <activity android:name=".content.DetailsWalletActivity"></activity>
     </application>
 
 </manifest>

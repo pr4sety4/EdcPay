@@ -13,10 +13,10 @@ import com.example.adi.edcpay.adapter.TabAdapter;
 import com.example.adi.edcpay.content.Finance;
 import com.example.adi.edcpay.content.History;
 import com.example.adi.edcpay.content.Home;
+import com.example.adi.edcpay.content.ListWalletFragment;
 import com.example.adi.edcpay.content.Merchant;
 import com.example.adi.edcpay.content.Notification;
 import com.example.adi.edcpay.content.Setting;
-import com.example.adi.edcpay.content.Wallet;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         tabAdapter.addFragment(new Home(), "Home", tabIcons[0]);
         tabAdapter.addFragment(new Merchant(), "Merchant", tabIcons[1]);
         tabAdapter.addFragment(new Finance(), "Finance", tabIcons[2]);
-        tabAdapter.addFragment(new Wallet(), "Wallet", tabIcons[3]);
+        tabAdapter.addFragment(new ListWalletFragment(), "Wallet", tabIcons[3]);
         tabAdapter.addFragment(new History(), "History", tabIcons[4]);
 
         viewPager.setAdapter(tabAdapter);
