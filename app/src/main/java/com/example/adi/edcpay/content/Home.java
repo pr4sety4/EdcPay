@@ -64,6 +64,8 @@ public class Home extends Fragment implements View.OnClickListener, PromoAdapter
         image.add(R.drawable.ad1);
         image.add(R.drawable.ad2);
         image.add(R.drawable.ad3);
+        image.add(R.drawable.ad4);
+        image.add(R.drawable.ad5);
 
         recyclerViewPromo = view.findViewById(R.id.homePromoRecyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);

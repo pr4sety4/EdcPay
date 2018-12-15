@@ -12,18 +12,21 @@ import android.view.ViewGroup;
 
 import com.example.adi.edcpay.DetailActivity;
 import com.example.adi.edcpay.R;
-import com.example.adi.edcpay.adapter.PromoAdapter;
+import com.example.adi.edcpay.adapter.DealsAndPromoAdapter;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Deals extends Fragment implements PromoAdapter.ItemClickListener {
+public class Deals extends Fragment implements DealsAndPromoAdapter.ItemClickListener {
 
 
     RecyclerView recyclerViewPromo;
-    PromoAdapter promoAdapter;
+    DealsAndPromoAdapter promoAdapter;
+    ArrayList<Integer> image = new ArrayList<>();
+    ArrayList<String> title = new ArrayList<>();
+    ArrayList<String> desc = new ArrayList<>();
 
     public Deals() {
         // Required empty public constructor
@@ -35,20 +38,35 @@ public class Deals extends Fragment implements PromoAdapter.ItemClickListener {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_deals, container, false);
 
-        ArrayList<Integer> image = new ArrayList<>();
+
         image.add(R.drawable.ad1);
         image.add(R.drawable.ad2);
         image.add(R.drawable.ad3);
+        image.add(R.drawable.ad4);
+        image.add(R.drawable.ad5);
+
+        title.add("Edc Pay");
+        title.add("Edc Pay");
+        title.add("Edc Pay");
+        title.add("Edc Pay");
+        title.add("Edc Pay");
+
+        desc.add("Simpan dan pakai kartu digibank");
+        desc.add("Kirim EdcPay Raih Iphone X");
+        desc.add("Foto Momen 12.12 pakai EdcPay dapetin Samsung A9");
+        desc.add("Jadilah akun Premium dapatkan pulsa 10k");
+        desc.add("Mainkan Spin & Win raih separuh harga");
 
         recyclerViewPromo = view.findViewById(R.id.homePromoRecyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         recyclerViewPromo.setLayoutManager(linearLayoutManager);
-        promoAdapter = new PromoAdapter(image, getActivity());
-        promoAdapter.setClickListener(this);
+        promoAdapter = new DealsAndPromoAdapter(getActivity(), image, title, desc);
+
         recyclerViewPromo.setAdapter(promoAdapter);
 
         return view;
     }
+
 
     @Override
     public void onItemClick(View view, int position) {

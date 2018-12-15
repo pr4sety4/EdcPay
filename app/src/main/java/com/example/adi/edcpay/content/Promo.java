@@ -12,18 +12,21 @@ import android.view.ViewGroup;
 
 import com.example.adi.edcpay.DetailActivity;
 import com.example.adi.edcpay.R;
-import com.example.adi.edcpay.adapter.PromoAdapter;
+import com.example.adi.edcpay.adapter.DealsAndPromoAdapter;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Promo extends Fragment implements PromoAdapter.ItemClickListener {
+public class Promo extends Fragment implements DealsAndPromoAdapter.ItemClickListener {
 
 
     RecyclerView recyclerViewPromo;
-    PromoAdapter promoAdapter;
+    DealsAndPromoAdapter promoAdapter;
+    ArrayList<Integer> image = new ArrayList<>();
+    ArrayList<String> title = new ArrayList<>();
+    ArrayList<String> desc = new ArrayList<>();
 
     public Promo() {
         // Required empty public constructor
@@ -35,15 +38,23 @@ public class Promo extends Fragment implements PromoAdapter.ItemClickListener {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_promo, container, false);
 
-        ArrayList<Integer> image = new ArrayList<>();
-        image.add(R.drawable.ad2);
-        image.add(R.drawable.ad3);
+        image.add(R.drawable.promo1);
+        image.add(R.drawable.promo4);
+        image.add(R.drawable.promo5);
+
+        title.add("Edc Pay");
+        title.add("Edc Pay");
+        title.add("Edc Pay");
+
+        desc.add("Terima Kasih Telah Memilih Kami Sebagai Best App 2018!");
+        desc.add("Buruan, Beli Gadget & Elektronik Idaman Sebelum Kehabisan!");
+        desc.add("Kulit Sempurna Cerah Merona, Diskon hingga 20%");
 
         recyclerViewPromo = view.findViewById(R.id.homePromoRecyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         recyclerViewPromo.setLayoutManager(linearLayoutManager);
-        promoAdapter = new PromoAdapter(image, getActivity());
-        promoAdapter.setClickListener(this);
+        promoAdapter = new DealsAndPromoAdapter(getActivity(), image, title, desc);
+
         recyclerViewPromo.setAdapter(promoAdapter);
 
         return view;

@@ -58,9 +58,7 @@ public class DetailActivity extends AppCompatActivity {
 
         // Adding child data
         List<String> top250 = new ArrayList<String>();
-        top250.add("1. “Pengelola” adalah developer.");
-        top250.add("2. “Layanan” adalah segala bentuk aktivitas yang terjadi  yang diperuntukkan untuk pengguna.");
-        top250.add("3. “Jual Beli” adalah bagian yang berisi informasi mengenai penjualan dan pembelian barang dan jasa.");
+        top250.add(getResources().getString(R.string.syarat_and_ketentuan));
 
         List<String> nowShowing = new ArrayList<String>();
         nowShowing.add("1. “Pengelola” adalah developer.");

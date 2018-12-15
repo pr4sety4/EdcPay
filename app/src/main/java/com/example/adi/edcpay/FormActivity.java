@@ -100,10 +100,14 @@ public class FormActivity extends AppCompatActivity {
             case "Send":
                 etFirst.setVisibility(View.VISIBLE);
                 etFirst.setHint("Nomor Rek. Tujuan");
+                etSecond.setVisibility(View.VISIBLE);
+                etSecond.setHint("Nominal");
                 break;
             case "Request":
                 etFirst.setVisibility(View.VISIBLE);
                 etFirst.setHint("Nomor Rek. Tujuan");
+                etSecond.setVisibility(View.VISIBLE);
+                etSecond.setHint("Nominal");
                 break;
         }
     }

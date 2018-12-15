@@ -7,11 +7,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.example.adi.edcpay.ChooseBuyActivity;
 import com.example.adi.edcpay.FormActivity;
 import com.example.adi.edcpay.R;
+import com.example.adi.edcpay.util.Constant;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.series.DataPoint;
@@ -27,8 +28,7 @@ public class Finance extends Fragment implements View.OnClickListener {
         // Required empty public constructor
     }
 
-    ImageView imgSend, imgBuy, imgWithDraw;
-
+    LinearLayout imgSend, imgWithDraw, imgBuy;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -75,14 +75,21 @@ public class Finance extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        Intent intentForm = new Intent(getActivity(), FormActivity.class);
         switch (v.getId()) {
             case R.id.buyIcon:
                 Intent intentBuy = new Intent(getActivity(), ChooseBuyActivity.class);
                 startActivity(intentBuy);
                 break;
-            default:
-                Intent intent = new Intent(getActivity(), FormActivity.class);
-                startActivity(intent);
+            case R.id.sendFinanceIcon:
+                intentForm.putExtra(Constant.TITLE, "Send");
+                intentForm.putExtra(Constant.SUB_TITLE, "Send");
+                intentForm.putExtra(Constant.ICON, R.drawable.send);
+                startActivity(intentForm);
+                break;
+            case R.id.withdrawIcon:
+                WithdrawFragment withdrawFragment = new WithdrawFragment();
+                withdrawFragment.show(getActivity().getSupportFragmentManager(), "Withdraw Bottom Sheet");
                 break;
         }
 

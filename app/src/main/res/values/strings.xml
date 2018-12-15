@@ -12,5 +12,16 @@
          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a viverra nulla, at dignissim turpis. Praesent elementum nisl at mi luctus ornare vitae sit amet mauris. Maecenas vitae tincidunt dolor. Curabitur volutpat condimentum turpis, et aliquam urna interdum quis. Nulla eget eros diam. Morbi cursus laoreet elit, at convallis leo condimentum et. Curabitur ornare volutpat lectus et ultrices."\n\n
          "Pellentesque nec consequat leo. In lacus nibh, semper sit amet pellentesque a, elementum eget justo. Donec pulvinar ipsum ipsum, id semper velit dictum eget. Curabitur consectetur luctus lacus, ac convallis massa facilisis vel. Phasellus placerat rhoncus magna a congue. Vivamus non tempus nulla. Morbi nulla mi, aliquam et semper ac, lacinia ac tellus. Etiam dapibus ex ut velit faucibus placerat. Proin rhoncus porta nibh non aliquet. Aenean pellentesque felis mollis nisl elementum congue. "
     </string>
+    <string name="description">
+        "Sering sering mengirimkan Dana ke rekan rekan anda dan dapatkan kesempatan untuk memenangkan sebuah IPHONE X !!"
+    </string>
+    <string name="syarat_and_ketentuan">
+         "Untuk berpartisipasi dalam kompetisi ini, user wajib melakukan pengiriman uang melalui fitur “Kirim DANA” di aplikasi DANA"\n
+        "Tidak ada batasan minimum nominal dan frekuensi dalam melakukan pengiriman uang"/n
+        "User dapat menggunakan saldo DANA maupun kartu debit untuk mengirim uang melalui fitur “Kirim DANA”"\n
+        "Kompetisi berlangsung pada periode 13-31 Desember 2018"\n
+        "Hadiah dari kompetisi ini berupa 2 buah iPhone X untuk 2 orang pemenang yang akan diberikan setiap harinya selama periode 13-31 Desember 2018"\n
+        "Pemenang akan langsung dihubungi oleh DANA melalui telepon dengan nomor yang terdaftar pada akun DANA"\n
+    </string>
     <string name="action_settings">Settings</string>
 </resources>
