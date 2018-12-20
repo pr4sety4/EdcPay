@@ -31,7 +31,7 @@ public class DetailActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setTitle("Grape");
+        setTitle("Edc Pay");
 
         collapsingToolbarLayout = findViewById(R.id.toolbar_layout);
         collapsingToolbarLayout.setExpandedTitleColor(ContextCompat.getColor(this, R.color.transparent));

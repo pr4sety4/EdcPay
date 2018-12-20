@@ -8,15 +8,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.adi.edcpay.AboutActivity;
 import com.example.adi.edcpay.EditProfileActivity;
 import com.example.adi.edcpay.LoginActivity;
 import com.example.adi.edcpay.R;
+import com.example.adi.edcpay.util.Constant;
 
 public class Setting extends AppCompatActivity implements View.OnClickListener {
 
     Toolbar settingMainToolbar;
     Button btnLogOut;
-    TextView tvEditProfile;
+    TextView tvEditProfile, tvTentang, tvFaq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,8 @@ public class Setting extends AppCompatActivity implements View.OnClickListener {
         settingMainToolbar = findViewById(R.id.toolbarHeader);
         btnLogOut = findViewById(R.id.btnLogOut);
         tvEditProfile = findViewById(R.id.tvEditProfile);
+        tvTentang = findViewById(R.id.tvTentang);
+        tvFaq = findViewById(R.id.tvFaQ);
 
         setSupportActionBar(settingMainToolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -33,6 +37,8 @@ public class Setting extends AppCompatActivity implements View.OnClickListener {
 
         btnLogOut.setOnClickListener(this);
         tvEditProfile.setOnClickListener(this);
+        tvTentang.setOnClickListener(this);
+        tvFaq.setOnClickListener(this);
     }
 
     @Override
@@ -50,6 +56,7 @@ public class Setting extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        Intent intentAbout = new Intent(this, AboutActivity.class);
         switch (v.getId()) {
             case R.id.btnLogOut:
                 Intent intentLogOut = new Intent(this, LoginActivity.class);
@@ -58,6 +65,14 @@ public class Setting extends AppCompatActivity implements View.OnClickListener {
             case R.id.tvEditProfile:
                 Intent intentEditProfile = new Intent(this, EditProfileActivity.class);
                 startActivity(intentEditProfile);
+                break;
+            case R.id.tvTentang:
+                intentAbout.putExtra(Constant.TITLE, "Tentang Edc Pay");
+                startActivity(intentAbout);
+                break;
+            case R.id.tvFaQ:
+                intentAbout.putExtra(Constant.TITLE, "FAQ");
+                startActivity(intentAbout);
                 break;
         }
     }

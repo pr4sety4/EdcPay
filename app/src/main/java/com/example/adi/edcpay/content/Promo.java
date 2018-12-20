@@ -54,7 +54,7 @@ public class Promo extends Fragment implements DealsAndPromoAdapter.ItemClickLis
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         recyclerViewPromo.setLayoutManager(linearLayoutManager);
         promoAdapter = new DealsAndPromoAdapter(getActivity(), image, title, desc);
-
+        promoAdapter.setClickListener(this);
         recyclerViewPromo.setAdapter(promoAdapter);
 
         return view;

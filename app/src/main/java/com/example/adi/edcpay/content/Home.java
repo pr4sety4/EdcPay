@@ -35,10 +35,10 @@ public class Home extends Fragment implements View.OnClickListener, PromoAdapter
     }
 
     CardView imgPln, imgPulsa, imgPascabayar, imgBpjs, imgTvKabel, imgAsuransi, imgPaketData;
-    ImageView imgSeeAll, imgTopUp, imgSend, imgRequest, imgScan, imgPay;
+    ImageView imgSeeAll;
     RecyclerView recyclerViewPromo;
     PromoAdapter promoAdapter;
-    LinearLayout userLayout, cashLayout;
+    LinearLayout userLayout, cashLayout, imgTopUp, imgSend, imgRequest, imgScan, imgPay;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -146,6 +146,9 @@ public class Home extends Fragment implements View.OnClickListener, PromoAdapter
                 startActivity(intentForm);
                 break;
             case R.id.topupIcon:
+                intentForm.putExtra(Constant.TITLE, "Top Up");
+                intentForm.putExtra(Constant.SUB_TITLE, "Top Up");
+                intentForm.putExtra(Constant.ICON, R.drawable.topup);
                 startActivity(intentForm);
                 break;
             case R.id.sendIcon:

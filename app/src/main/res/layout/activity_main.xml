@@ -186,13 +186,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:id="@+id/scanIcon"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/scanIcon"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/scan" />
+                    android:src="@drawable/scan" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -208,13 +209,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:id="@+id/topupIcon"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/topupIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/topup" />
+                    android:src="@drawable/topup" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -235,13 +236,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center|center_vertical"
+                        android:id="@+id/payIcon"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/payIcon"
+
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    app:srcCompat="@drawable/qrcode" />
+                    android:src="@drawable/qrcode" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -257,13 +259,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:id="@+id/sendIcon"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/sendIcon"
-                    app:srcCompat="@drawable/send" />
+                    android:src="@drawable/send" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -279,14 +281,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:id="@+id/requestIcon"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/requestIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:rotation="180"
-                    app:srcCompat="@drawable/send" />
+                    android:src="@drawable/send" />
 
                 <TextView
                     android:layout_width="wrap_content"

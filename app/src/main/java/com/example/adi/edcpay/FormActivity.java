@@ -20,7 +20,7 @@ public class FormActivity extends AppCompatActivity {
     ImageView imgSubTitle;
     TextInputLayout etFirst, etSecond;
     RadioGroup rgFirst;
-    LinearLayout nominalLayout;
+    LinearLayout nominalLayout, paymentLayout;
     RadioButton rbPrabayar, rbPascabayar;
 
     @Override
@@ -39,6 +39,7 @@ public class FormActivity extends AppCompatActivity {
         rbPascabayar = findViewById(R.id.radioPascabayar);
         rbPrabayar = findViewById(R.id.radioPrabayar);
         tvNominal = findViewById(R.id.tvNominal);
+        paymentLayout = findViewById(R.id.paymentMethod);
 
         setSupportActionBar(formToolbarHeader);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -108,6 +109,7 @@ public class FormActivity extends AppCompatActivity {
                 etFirst.setHint("Nomor Rek. Tujuan");
                 etSecond.setVisibility(View.VISIBLE);
                 etSecond.setHint("Nominal");
+                paymentLayout.setVisibility(View.GONE);
                 break;
         }
     }

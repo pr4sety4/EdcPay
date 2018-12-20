@@ -4,37 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center|center_vertical"
     android:background="@color/lightPurple"
     tools:context=".PinActivity">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarHeader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/darkPurple"
-        android:gravity="center"
-        android:minHeight="?attr/actionBarSize"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:titleTextColor="@android:color/white">
-
-        <TextView
-            android:id="@+id/toolbar_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Edc Pay"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:textColor="@android:color/background_light" />
-
-
-    </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.CardView
         android:id="@+id/profile_image_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="104dp"
         android:elevation="15dp"
+        android:layout_centerHorizontal="true"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="40dp">
 
@@ -50,11 +29,11 @@
         android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/profile_image_card"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="36dp"
         android:fontFamily="sans-serif-thin"
         android:gravity="center"
         android:maxLines="1"
+        android:layout_centerHorizontal="true"
         android:text="Welcome"
         android:textColor="@color/white"
         android:textSize="34sp" />
@@ -65,8 +44,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/profile_name"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
         android:elevation="15dp"
+        android:layout_margin="5dp"
         android:visibility="gone"
         app:cardBackgroundColor="@color/red"
         app:cardCornerRadius="10dp">
@@ -87,18 +66,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/wrongCardView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp" />
+        android:layout_marginTop="36dp"
+        app:keypadShowDeleteButton="true"
+        android:layout_centerHorizontal="true" />
 
     <com.andrognito.pinlockview.PinLockView
         android:id="@+id/pin_lock_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
         android:layout_below="@id/indicator_dots"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        app:keypadButtonSize="102dp"
-        app:keypadShowDeleteButton="true"
+        android:scrollbars="none"
+        app:keypadButtonSize="62dp"
         app:keypadTextColor="@color/white"
         app:keypadTextSize="25dp" />
 

@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
         tabAdapter = new TabAdapter(getSupportFragmentManager(), this);
         tabAdapter.addFragment(new Home(), "Home", tabIcons[0]);
-        tabAdapter.addFragment(new Merchant(), "Market", tabIcons[1]);
-        tabAdapter.addFragment(new Finance(), "Finance", tabIcons[2]);
+        tabAdapter.addFragment(new Merchant(), "Promo", tabIcons[1]);
+        tabAdapter.addFragment(new Finance(), "Market", tabIcons[2]);
         tabAdapter.addFragment(new ListWalletFragment(), "Wallet", tabIcons[3]);
         tabAdapter.addFragment(new History(), "History", tabIcons[4]);
 

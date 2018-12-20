@@ -48,7 +48,7 @@
                         android:id="@+id/subToolbarImage"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/logodana" />
+                        android:src="@drawable/ic_launcher_foreground" />
                 </android.support.v7.widget.CardView>
 
                 <LinearLayout
@@ -62,7 +62,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:text="Dana"
+                        android:text="EdcPay"
                         android:textColor="#FFFF"
                         android:textSize="16sp" />
 

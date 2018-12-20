@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.adi.edcpay.ChooseBuyActivity;
 import com.example.adi.edcpay.FormActivity;
@@ -29,6 +30,7 @@ public class Finance extends Fragment implements View.OnClickListener {
     }
 
     LinearLayout imgSend, imgWithDraw, imgBuy;
+    TextView tvBuyBTC, tvSellBTC;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,6 +39,8 @@ public class Finance extends Fragment implements View.OnClickListener {
         imgSend = view.findViewById(R.id.sendFinanceIcon);
         imgBuy = view.findViewById(R.id.buyIcon);
         imgWithDraw = view.findViewById(R.id.withdrawIcon);
+        tvBuyBTC = view.findViewById(R.id.tvBuyBitcoin);
+        tvSellBTC = view.findViewById(R.id.tvSellBitcoin);
 
         GraphView graph = view.findViewById(R.id.graph);
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[]{
@@ -69,6 +73,8 @@ public class Finance extends Fragment implements View.OnClickListener {
         imgSend.setOnClickListener(this);
         imgBuy.setOnClickListener(this);
         imgWithDraw.setOnClickListener(this);
+        tvBuyBTC.setOnClickListener(this);
+        tvSellBTC.setOnClickListener(this);
 
         return view;
     }
@@ -76,9 +82,12 @@ public class Finance extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Intent intentForm = new Intent(getActivity(), FormActivity.class);
+        Intent intentBuy = new Intent(getActivity(), ChooseBuyActivity.class);
         switch (v.getId()) {
             case R.id.buyIcon:
-                Intent intentBuy = new Intent(getActivity(), ChooseBuyActivity.class);
+                startActivity(intentBuy);
+                break;
+            case R.id.tvBuyBitcoin:
                 startActivity(intentBuy);
                 break;
             case R.id.sendFinanceIcon:
@@ -86,6 +95,9 @@ public class Finance extends Fragment implements View.OnClickListener {
                 intentForm.putExtra(Constant.SUB_TITLE, "Send");
                 intentForm.putExtra(Constant.ICON, R.drawable.send);
                 startActivity(intentForm);
+                break;
+            case R.id.tvSellBitcoin:
+                startActivity(intentBuy);
                 break;
             case R.id.withdrawIcon:
                 WithdrawFragment withdrawFragment = new WithdrawFragment();

@@ -72,10 +72,11 @@
             app:fontFamily="@font/roboto_bold" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tvTentang"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
             android:text="Tentang"
+            android:layout_width="match_parent"
             android:textColor="#000"
             android:textSize="16sp"
             app:fontFamily="@font/roboto" />
@@ -89,12 +90,13 @@
             android:radius="10dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tvFaQ"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
             android:text="FaQ"
             android:textColor="#000"
             android:textSize="16sp"
+            android:layout_width="match_parent"
             app:fontFamily="@font/roboto" />
 
         <View
